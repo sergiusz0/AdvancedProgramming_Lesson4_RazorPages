@@ -1,0 +1,26 @@
+﻿@page
+@model Zadanie_4.Pages.loginModel
+@{
+}
+
+<div class="container">
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="col-1">
+           <label>Login</label>
+        </div>
+        <div class="col-1">
+            <input type="text" asp-for="Cred.UserName"/>
+        </div>
+        <div class="col-1">
+           <label>Hasło</label>
+        </div>
+        <div class="col-1">
+            <input type="Password" asp-for="Cred.Password"/>
+        </div>        
+        <div class="col-1" style="margin-top: 20px;">
+            <input type="submit" asp-for="Cred.Password" class="button" value="login"/>
+        </div>
+        
+    </form>
+</div>

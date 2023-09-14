@@ -1,0 +1,24 @@
+﻿@page
+@model Zadanie_4.Pages.Message.AddModel
+@{
+}
+
+<div class="container">
+    <form method="post">
+        <div class="col-1">
+            <label>Napisz swój komunikat</label>
+        </div>
+        <div class="col-1">
+            <textarea asp-for="AddMessageRequest.MesText"></textarea>
+        </div>
+        <div class="col-1">
+            <label>Do kogo chcesz wysłać?</label>
+        </div>
+        <div class="col-1">
+            <input type="text" asp-for="AddMessageRequest.Recipient" />
+        </div>
+        <div class="col-1" style="margin-top: 20px;">
+            <input type="submit" class="button"/>
+        </div>
+    </form>
+</div>

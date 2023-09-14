@@ -1,0 +1,30 @@
+﻿@page
+@model Zadanie_4.Pages.Message.HistoryModel
+@{
+}
+
+<h1>List of messages</h1>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <td>User</td>
+                <td>Message</td>
+                <td>Recepient</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var komunikat in Model.listt)
+            {
+                @if (komunikat.User == this.User.Identity.Name)
+                {
+                    <tr>
+                        <td>@komunikat.User</td>
+                        <td>@komunikat.MesText</td>
+                        <td>@komunikat.Recipient</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
